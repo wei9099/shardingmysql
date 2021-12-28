@@ -18,7 +18,6 @@ public class RedisController {
     @RequestMapping("/hash/hset")
     public void set(){
         DataSource dataSource = new DruidDataSource();
-
         redisTemplate.opsForHash().put("default", "default", dataSource);
     }
 }
